@@ -14,8 +14,9 @@ struct LoginView: View {
         NavigationView{
             VStack{
                 //Header
-                HeaderView()
+                HeaderView(title: "To Do List", subtitle: "I have dementia", angle: 15, backgroundColor: Color.pink)
                 //Login Form
+                
                 Form{
                     TextField("Email Address", text: $email)
                         .textFieldStyle(DefaultTextFieldStyle())
@@ -37,6 +38,9 @@ struct LoginView: View {
                     .padding()
                     
                 }
+                .offset(y: -50)
+                
+                
                 //Create Account
                 VStack{
                     Text("New Around Here?")
